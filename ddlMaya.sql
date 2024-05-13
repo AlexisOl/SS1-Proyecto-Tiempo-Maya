@@ -444,3 +444,15 @@ ALTER TABLE `uinal`
 --
 ALTER TABLE `acontecimiento` 
     ADD COLUMN `descripcion` VARCHAR(45) NULL AFTER `categoria`;
+
+
+---- ideas para los cambios agregar 
+-- tiempo 
+-- tipo de idioma
+-- tabla de idiomas
+
+CREATE TABLE tipoIdioma(
+  identificador int not null AUTO_INCREMENT,
+  nombre_idioma varchar(100),
+  primary key(identificador)
+);
