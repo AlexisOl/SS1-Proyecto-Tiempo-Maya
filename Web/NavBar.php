@@ -1,11 +1,10 @@
 <?php
-
 $conn = include 'conexion/conexion.php';
-$kinesNav = $conn->query("SELECT nombre FROM tiempo_maya.kin order by nombre;");
-$uinalesNav = $conn->query("SELECT nombre FROM tiempo_maya.uinal order by nombre;");
-$nahualesNav = $conn->query("SELECT nombre FROM tiempo_maya.nahual order by nombre;");
-$energiasNav = $conn->query("SELECT nombre FROM tiempo_maya.energia order by id;");
-$periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by orden ;");
+// cambios de nombre de la base de datos para ir acorde ver bien
+$kinesNav = $conn->query("SELECT nombre FROM tiempomaya.kin order by nombre;");
+if ($conn) {
+  echo "aaa";
+}
 
 ?>
 <?php include "mensaje.php"; ?>
