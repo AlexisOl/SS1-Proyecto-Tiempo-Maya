@@ -1,19 +1,19 @@
 <?php session_start(); ?>
-<?php 
+<?php
 $conn = include "conexion/conexion.php";
 
-if(isset($_GET['fecha'])){
-$fecha_consultar = $_GET['fecha'];
-}else{
-date_default_timezone_set('US/Central');  
-$fecha_consultar = date("Y-m-d");
+if (isset($_GET['fecha'])) {
+    $fecha_consultar = $_GET['fecha'];
+} else {
+    date_default_timezone_set('US/Central');
+    $fecha_consultar = date("Y-m-d");
 }
 
 $nahual = include 'backend/buscar/conseguir_nahual_nombre.php';
 $energia = include 'backend/buscar/conseguir_energia_numero.php';
 $haab = include 'backend/buscar/conseguir_uinal_nombre.php';
 $cuenta_larga = include 'backend/buscar/conseguir_fecha_cuenta_larga.php';
-$cholquij = $nahual." ". strval($energia);
+$cholquij = $nahual . " " . strval($energia);
 
 ?>
 <!DOCTYPE html>
@@ -40,36 +40,72 @@ $cholquij = $nahual." ". strval($energia);
                     <form action="#" method="GET">
                         <div class="mb-1">
                             <label for="fecha" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" name="fecha" id="fecha" value="<?php echo isset($fecha_consultar) ? $fecha_consultar : ''; ?>" >
+                            <input type="date" class="form-control" name="fecha" id="fecha"
+                                value="<?php echo isset($fecha_consultar) ? $fecha_consultar : ''; ?>">
                         </div>
                         <button type="submit" class="btn btn-get-started"><i class="far fa-clock"></i> Calcular</button>
                     </form>
 
-                    <div id="tabla">
-                        <table class="table table-dark table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Calendario</th>
-                                    <th scope="col" style="width: 60%;">Fecha</th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Calendario Haab</th>
-                                    <td ><?php echo isset($haab) ? $haab : ''; ?></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Calendario Cholquij</th>
-                                    <td><?php echo isset($cholquij) ? $cholquij : ''; ?></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cuenta Larga</th>
-                                    <td><?php echo isset($cuenta_larga) ? $cuenta_larga : ''; ?></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!-- aqui hago acutualizacion para las imagenes -->
+                    <div class="container">
+
+                        <div id="tabla">
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Calendario</th>
+                                        <th scope="col" style="width: 60%;">Fecha</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Calendario Haab</th>
+                                        <td><?php echo isset($haab) ? $haab : ''; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Calendario Cholquij</th>
+                                        <td><?php echo isset($cholquij) ? $cholquij : ''; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cuenta Larga</th>
+                                        <td><?php echo isset($cuenta_larga) ? $cuenta_larga : ''; ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <img src=".\imgs\CuentaLargaEspecifico\graficoInicial.png" alt="Cuenta larga"
+                            class="img-cuentalarga"></img>
+                        <div class="tabla">
+                            <table class="table table-dark table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\baktun.png" alt="Cuenta larga"
+                                                class="img-cuentalarga" width="100" height="100"></img></td>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\Katun.png" alt="Cuenta larga"
+                                                class="img-cuentalarga" width="100" height="100"></img></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\tun.png" alt="Cuenta larga"
+                                                class="img-cuentalarga" width="100" height="100"></img></td>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\unial.png" alt="Cuenta larga"
+                                                class="img-cuentalarga" width="100" height="100"></img></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\kin.png" alt="Cuenta larga"
+                                                class="img-cuentalarga" width="100" height="100"></img></td>
+                                        <td><img src=".\imgs\CuentaLargaEspecifico\graficoInicial.png"
+                                                alt="Cuenta larga" class="img-cuentalarga" width="100"
+                                                height="100"></img></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
+
+
                 </div>
 
             </div>

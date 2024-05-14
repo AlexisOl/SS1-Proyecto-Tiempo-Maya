@@ -137,7 +137,9 @@ CREATE TABLE `nahual` (
   `nombreYucateco` varchar(50) DEFAULT NULL,
   `significado` varchar(100) NOT NULL,
   `htmlCodigo` longtext,
-  `categoria` varchar(100) NOT NULL
+  `categoria` varchar(100) NOT NULL,
+   --nuevo
+   `tipo` varchar(100) NOT NULL
 ) ;
 -- --------------------------------------------------------
 
