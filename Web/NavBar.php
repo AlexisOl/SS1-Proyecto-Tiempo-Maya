@@ -115,7 +115,25 @@ $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by ord
               <a class="nav-link" href="models/paginaModelo.php?pagina=Rueda Calendarica">Rueda Calendarica</a>
             </li>
 
-            <li class="nav-item"><a class="nav-link" href="calculadora.php">Calculadora</a></li>
+            <li class="nav-item"><a class="nav-link" href="models/paginaModelo.php?pagina=Calculadora">
+                Calculadora</a>
+              <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Calculadora
+              </button>
+              <ul>
+                <li>
+                  <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Caluladora
+                  </button>
+                  <a class="nav-link" href="calculadora.php" style="font-size: 13px;">Calculadora </a>
+
+                </li>
+
+              </ul>
+
+            </li>
 
             <!--para la region-->
             <li class="nav-item"><a class="nav-link" href="relacionMesoamericana.php">Relacion Mesoamericana</a></li>

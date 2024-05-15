@@ -462,6 +462,30 @@ COMMIT;
 INSERT INTO `acontecimiento` (`id`, `titulo`, `autor`, `Periodo_nombre`, `htmlCodigo`, `fechaInicio`, `fechaFin`, `ACInicio`, `ACFin`, `categoria`) VALUES
 (1, 'Escritura', 'admin', 'Clasico', 'sdfasdf', '700', '', 'A.C', ' ', 'Escritura1');
 
+
+-- informacion extra
+--nueva categoria
+
+INSERT INTO `categoria` (`nombre`) VALUES
+('Calculadora');
+
+--nueva pagina
+INSERT INTO `pagina` (`orden`, `nombre`, `categoria`, `seccion`, `htmlCodigo`) VALUES
+(1, 'Informacion Calculadora', 'Calculadora', 'Informacion', "<p>El sistema de calendario maya registra una serie de ciclos de tiempo recurrentes basados ​​en los movimientos del Sol, la Luna y los planetas. Cualquier fecha determinada se repite a intervalos cíclicos, tal como, por ejemplo, el 1 de enero en el calendario gregoriano se repite cada vez que la Tierra completa una revolución alrededor del Sol. Un ciclo completo de Cuenta Larga Maya tiene una duración de 5.125 años. El sistema Maya de Cuenta Larga establece una cronología absoluta en la que cualquier fecha determinada es única, como el 21 de diciembre de 2012, en el sistema gregoriano. El calendario de Cuenta Larga realiza un seguimiento de los días que han pasado desde la fecha mítica de inicio de la creación maya, el 11 de agosto de 3114 a.C.</p>\n\n<p> La relación del 13 con los ciclos de la vida es múltiple, entre ellas se pueden mencionar:</p>\n<ul>\n	<li>Las 13 energías en el nacimiento</li>\n	<li>Los 13 ciclos de 20 días de un año Cholq’ij.</li>\n</ul>\n<p>\nEl 13 es una cantidad importante en el pensamiento maya. Se utiliza para indicar el nivel de\nenergía y al combinar con el significado de los nawales construye la personalidad.		Este número\ntiene influencia en toda la vida, marca la niñez, juventud, madurez y ancianidad.\n</p>\n<ul><li>20 k’in = 1 uinal o 20 dias</li><li>20 tun = 1 katun o 7,200 dias</li><li>18 uinal = 1 tun o 360 dias</li><li>20 katun = 1 baktun o 144,000 dias</li></ul>\n\n<p>La sintaxis de lectura es la siguiente: baktun.katun.tun.uinal.k’in | Tzolk’in | Haab | señor de la noche</p>\n\n<img src = '..\\imgs\\descripcionCalculadora\\cuentaLargaSimbologia.png'/>\n<p>Dado la cuanta larga 12.19.19.17.19 | 3 Kawak | 2 K'ank'in | G8, se tiene la siguiente representacion</p><ol><li>Glifo introductorio de la serie inicial: este símbolo identifica esta fecha como perteneciente al sistema de cuenta larga</li><li>Baktun: un número (12 en este ejemplo) junto con el símbolo de baktun</li><li>Katun: un número (19 en este ejemplo) junto con el símbolo de katun </li><li>Tun: un número (19 en este ejemplo) junto con el símbolo de tun</li><li>Uinal: un número (17 en este ejemplo) junto con el símbolo de uinal</li><li>K'in: un número (19 en este ejemplo) junto con el símbolo de k'in </li><li>Fecha Tzolk'in: un número (3 en este ejemplo) junto con el glifo del día Tzolk'in (Kawak en este ejemplo)</li><li>Fecha de Haab: un número (2 en este ejemplo) junto con el glifo del día de Haab (K'ank'in en este ejemplo)</li><li>Señor de la Noche (G8 en este ejemplo): un glifo que representa una de las nueve deidades del inframundo maya.</li></ol>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --
 -- Restricciones para tablas volcadas
 --
