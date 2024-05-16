@@ -10,6 +10,7 @@ if (isset($_GET['fecha'])) {
   date_default_timezone_set('America/Mexico_City');
   $fecha_consultar = date("Y-m-d");
   $horario = date("H:i:s");
+
 }
 
 $nahual = include 'backend/buscar/conseguir_nahual_nombre.php';
@@ -55,24 +56,22 @@ $nocheDatetime2Alt = new DateTime($nocheHora2Alt);
 
 $pruebaDatetime = new DateTime($prueba);
 
-
 $horarioDeterminado = '';
-
-
+$horarioDatetime = new DateTime($horario);
 
 // verifica que tipo de horario esta
-if ($horario >= $amanecerDatetime1 && $horario <= $amanecerDatetime2) {
+if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatetime2) {
   $horarioDeterminado = 'amanecer';
-} else if ($horario >= $medioDiaDatetime1 && $horario <= $medioDiaDatetime2) {
+} else if ($horarioDatetime >= $medioDiaDatetime1 && $horarioDatetime <= $medioDiaDatetime2) {
   $horarioDeterminado = 'mediodia';
 
-} else if ($horario >= $tardeDatetime1 && $horario <= $tardeDatetime2) {
+} else if ($horarioDatetime >= $tardeDatetime1 && $horarioDatetime <= $tardeDatetime2) {
   $horarioDeterminado = 'tarde';
 
-} else if ($horario >= $nocheDatetime1 && $horario <= $nocheDatetime2) {
+} else if ($horarioDatetime >= $nocheDatetime1 && $horarioDatetime <= $nocheDatetime2) {
   $horarioDeterminado = 'noche';
 
-} else if ($horario <= $nocheDatetime2Alt) {
+} else if ($horarioDatetime <= $nocheDatetime2Alt) {
   $horarioDeterminado = 'noche';
 
 }

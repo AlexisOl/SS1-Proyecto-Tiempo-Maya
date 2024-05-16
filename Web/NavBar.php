@@ -116,7 +116,7 @@ $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by ord
             </li>
 
             <li class="nav-item"><a class="nav-link" href="models/paginaModelo.php?pagina=Calculadora">
-                Calculadora</a>
+                Calculadora &nbsp;&nbsp;&nbsp;&nbsp;</a>
               <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Calculadora
