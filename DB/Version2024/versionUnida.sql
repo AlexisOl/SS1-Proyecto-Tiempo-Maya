@@ -471,20 +471,131 @@ INSERT INTO `categoria` (`nombre`) VALUES
 
 --nueva pagina
 INSERT INTO `pagina` (`orden`, `nombre`, `categoria`, `seccion`, `htmlCodigo`) VALUES
-(1, 'Informacion Calculadora', 'Calculadora', 'Informacion', "<p>El sistema de calendario maya registra una serie de ciclos de tiempo recurrentes basados ​​en los movimientos del Sol, la Luna y los planetas. Cualquier fecha determinada se repite a intervalos cíclicos, tal como, por ejemplo, el 1 de enero en el calendario gregoriano se repite cada vez que la Tierra completa una revolución alrededor del Sol. Un ciclo completo de Cuenta Larga Maya tiene una duración de 5.125 años. El sistema Maya de Cuenta Larga establece una cronología absoluta en la que cualquier fecha determinada es única, como el 21 de diciembre de 2012, en el sistema gregoriano. El calendario de Cuenta Larga realiza un seguimiento de los días que han pasado desde la fecha mítica de inicio de la creación maya, el 11 de agosto de 3114 a.C.</p>\n\n<p> La relación del 13 con los ciclos de la vida es múltiple, entre ellas se pueden mencionar:</p>\n<ul>\n	<li>Las 13 energías en el nacimiento</li>\n	<li>Los 13 ciclos de 20 días de un año Cholq’ij.</li>\n</ul>\n<p>\nEl 13 es una cantidad importante en el pensamiento maya. Se utiliza para indicar el nivel de\nenergía y al combinar con el significado de los nawales construye la personalidad.		Este número\ntiene influencia en toda la vida, marca la niñez, juventud, madurez y ancianidad.\n</p>\n<ul><li>20 k’in = 1 uinal o 20 dias</li><li>20 tun = 1 katun o 7,200 dias</li><li>18 uinal = 1 tun o 360 dias</li><li>20 katun = 1 baktun o 144,000 dias</li></ul>\n\n<p>La sintaxis de lectura es la siguiente: baktun.katun.tun.uinal.k’in | Tzolk’in | Haab | señor de la noche</p>\n\n<img src = '..\\imgs\\descripcionCalculadora\\cuentaLargaSimbologia.png'/>\n<p>Dado la cuanta larga 12.19.19.17.19 | 3 Kawak | 2 K'ank'in | G8, se tiene la siguiente representacion</p><ol><li>Glifo introductorio de la serie inicial: este símbolo identifica esta fecha como perteneciente al sistema de cuenta larga</li><li>Baktun: un número (12 en este ejemplo) junto con el símbolo de baktun</li><li>Katun: un número (19 en este ejemplo) junto con el símbolo de katun </li><li>Tun: un número (19 en este ejemplo) junto con el símbolo de tun</li><li>Uinal: un número (17 en este ejemplo) junto con el símbolo de uinal</li><li>K'in: un número (19 en este ejemplo) junto con el símbolo de k'in </li><li>Fecha Tzolk'in: un número (3 en este ejemplo) junto con el glifo del día Tzolk'in (Kawak en este ejemplo)</li><li>Fecha de Haab: un número (2 en este ejemplo) junto con el glifo del día de Haab (K'ank'in en este ejemplo)</li><li>Señor de la Noche (G8 en este ejemplo): un glifo que representa una de las nueve deidades del inframundo maya.</li></ol>");
+(1, 'Informacion Calculadora', 'Calculadora', 'Informacion', "<p>El sistema de calendario maya registra una serie de ciclos de tiempo recurrentes basados ​​en los movimientos del Sol, la Luna y los planetas. Cualquier fecha determinada se repite a intervalos cíclicos, tal como, por ejemplo, el 1 de enero en el calendario gregoriano se repite cada vez que la Tierra completa una revolución alrededor del Sol. Un ciclo completo de Cuenta Larga Maya tiene una duración de 5.125 años. El sistema Maya de Cuenta Larga establece una cronología absoluta en la que cualquier fecha determinada es única, como el 21 de diciembre de 2012, en el sistema gregoriano. El calendario de Cuenta Larga realiza un seguimiento de los días que han pasado desde la fecha mítica de inicio de la creación maya, el 11 de agosto de 3114 a.C.</p>\n\n<p> La relación del 13 con los ciclos de la vida es múltiple, entre ellas se pueden mencionar:</p>\n<ul>\n	<li>Las 13 energías en el nacimiento</li>\n	<li>Los 13 ciclos de 20 días de un año Cholq’ij.</li>\n</ul>\n<p>\nEl 13 es una cantidad importante en el pensamiento maya. Se utiliza para indicar el nivel de\nenergía y al combinar con el significado de los nawales construye la personalidad.		Este número\ntiene influencia en toda la vida, marca la niñez, juventud, madurez y ancianidad.\n</p>\n<ul><li>20 k’in = 1 uinal o 20 dias</li><li>20 tun = 1 katun o 7,200 dias</li><li>18 uinal = 1 tun o 360 dias</li><li>20 katun = 1 baktun o 144,000 dias</li></ul>\n\n<p>La sintaxis de lectura es la siguiente: baktun.katun.tun.uinal.k’in | Tzolk’in | Haab | señor de la noche</p>\n\n<img src = '..\\imgs\\descripcionCalculadora\\cuentaLargaSimbologia.png'/>\n<p>Dado la cuanta larga 12.19.19.17.19 | 3 Kawak | 2 K'ank'in | G8, se tiene la siguiente representacion</p><ol><li>Glifo introductorio de la serie inicial: este símbolo identifica esta fecha como perteneciente al sistema de cuenta larga</li><li>Baktun: un número (12 en este ejemplo) junto con el símbolo de baktun</li><li>Katun: un número (19 en este ejemplo) junto con el símbolo de katun </li><li>Tun: un número (19 en este ejemplo) junto con el símbolo de tun</li><li>Uinal: un número (17 en este ejemplo) junto con el símbolo de uinal</li><li>K'in: un número (19 en este ejemplo) junto con el símbolo de k'in </li><li>Fecha Tzolk'in: un número (3 en este ejemplo) junto con el glifo del día Tzolk'in (Kawak en este ejemplo)</li><li>Fecha de Haab: un número (2 en este ejemplo) junto con el glifo del día de Haab (K'ank'in en este ejemplo)</li><li>Señor de la Noche (G8 en este ejemplo): un glifo que representa una de las nueve deidades del inframundo maya.</li></ol>"),
+(2,  'Cruz Maya', 'Calculadora', 'Elementos', "<p>El sistema de calendario maya registra una serie de ciclos de tiempo recurrentes basados ​​en los movimientos del Sol, la Luna y los planetas. Cualquier fecha determinada se repite a intervalos cíclicos, tal como, por ejemplo, el 1 de enero en el calendario gregoriano se repite cada vez que la Tierra completa una revolución alrededor del Sol. Un ciclo completo de Cuenta Larga Maya tiene una duración de 5.125 años. El sistema Maya de Cuenta Larga establece una cronología absoluta en la que cualquier fecha determinada es única, como el 21 de diciembre de 2012, en el sistema gregoriano. El calendario de Cuenta Larga realiza un seguimiento de los días que han pasado desde la fecha mítica de inicio de la creación maya, el 11 de agosto de 3114 a.C.</p>\n\n<p> La relación del 13 con los ciclos de la vida es múltiple, entre ellas se pueden mencionar:</p>\n<ul>\n	<li>Las 13 energías en el nacimiento</li>\n	<li>Los 13 ciclos de 20 días de un año Cholq’ij.</li>\n</ul>\n<p>\nEl 13 es una cantidad importante en el pensamiento maya. Se utiliza para indicar el nivel de\nenergía y al combinar con el significado de los nawales construye la personalidad.		Este número\ntiene influencia en toda la vida, marca la niñez, juventud, madurez y ancianidad.\n</p>\n<ul><li>20 k’in = 1 uinal o 20 dias</li><li>20 tun = 1 katun o 7,200 dias</li><li>18 uinal = 1 tun o 360 dias</li><li>20 katun = 1 baktun o 144,000 dias</li></ul>\n\n<p>La sintaxis de lectura es la siguiente: baktun.katun.tun.uinal.k’in | Tzolk’in | Haab | señor de la noche</p>\n\n<img src = '..\\imgs\\descripcionCalculadora\\cuentaLargaSimbologia.png'/>\n<p>Dado la cuanta larga 12.19.19.17.19 | 3 Kawak | 2 K'ank'in | G8, se tiene la siguiente representacion</p><ol><li>Glifo introductorio de la serie inicial: este símbolo identifica esta fecha como perteneciente al sistema de cuenta larga</li><li>Baktun: un número (12 en este ejemplo) junto con el símbolo de baktun</li><li>Katun: un número (19 en este ejemplo) junto con el símbolo de katun </li><li>Tun: un número (19 en este ejemplo) junto con el símbolo de tun</li><li>Uinal: un número (17 en este ejemplo) junto con el símbolo de uinal</li><li>K'in: un número (19 en este ejemplo) junto con el símbolo de k'in </li><li>Fecha Tzolk'in: un número (3 en este ejemplo) junto con el glifo del día Tzolk'in (Kawak en este ejemplo)</li><li>Fecha de Haab: un número (2 en este ejemplo) junto con el glifo del día de Haab (K'ank'in en este ejemplo)</li><li>Señor de la Noche (G8 en este ejemplo): un glifo que representa una de las nueve deidades del inframundo maya.</li></ol>");
 
 
 
+--- nueva tabla para la cruz maya, implementar
+---- aqui solo el ingreso de
+CREATE TABLE cruzMaya (
+  identificador int auto_increment not null,
+  nahual int(11) not null,
+  concepcion varchar(1000) not null,
+  destino varchar(1000) not null,
+  izquierda varchar(1000) not null,
+  derecha varchar(1000) not null,
+  PRIMARY key(identificador),
+  FOREIGN key (nahual) REFERENCES nahual(idweb)
+);
+
+
+--- insersion de cruzMaya 
+
+-- aqabal 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (8,"La energia de concepcion, Tzikin, le tra suerte, proteccion y fortuna; intuicion, vision y telepatia","La energia de destino es Batz le propicia planificar los pasos que va a dar y no actuar impulsivamente", "La energia del Toj esta al lado izquierdo, esta energia lo hara confrontar con su balance positivo o negativo", "El Noj en su lado derercho, le indica una nobleza especial, un caracter determinado y una gran capacidad intelectual, debe descubrir su pasado para proyectarse al futuro");
+-- kat 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (9,"La energia de concepcion, Ajmaq lo vuelve muy curioso, esta alianza Ajmaq(curiosidad)/ Kat (red) tiene un ascendente negativo sobre la persona porque le da una tendencia a queda atrapada en los problemas debe hacer grandes oraciones y ceremonias para eviar todo lo negativo en su vida.","La energia de destino es e le depara exitos y lo mejor de su vida, viajes y relaciones amorosas en el extranjero", "La energia del Tzi esta al lado izquierdo, señala la ley, por lo que suele ser una persona reconocida por su autoridad aunque tiende a ser autoriotario, no imponer a los demas, cada quien aprende por si mismo.", "El Tijax en su lado derercho, le da un poder que si no lo cuida se volvera incontrolabl, si aprende a usar ese poder sera un persona apreciada y buscada por quienes necesiten ayuda, es la energia que libera de los lios en que se meten, el Tijax corta con la red, puede cortar enfermedades");
+-- Kan 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (10,"La energía de su concepción, No'j, le proporciona nobleza, idealismo e rchinteligencia. El conocimiento y la sed de aprendizage es su mayor prueba, necesita ar ponerlo en práctica para alcanzar esa sabiduría que anhela.","La energía de su destino, Aj, le da una relación con la Madre Tierra muy especial. De edad mayor, alcanza su verdadero poder y conocimiento.", "El B'atz', como energía de su lado izquierdo, le permite ser reconocido como una autoridad. Puede ser un consejero en el campo intelectual, psicologico y espiritual.", "El Kawoq, en su lado derecho, le da una vida familiar muy enriquecedora, pero que ted puede crear una codependencia. Necesita superar ésta para volar por sí mismo.");
+-- Keme 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (11,"La energía de su concepción, Tijax, lo protege, lo retirará de cualquier situación o persona que le traiga problemas. Es el cuchillo de doble filo que rasga el velo de los misterios.","La energía de su destino, I'x, le dará una vida intensa, llena de altibajo, aunque siempre se le reconocerá como autoridad.", "La energía del Be'e, en su lado izquierdo, le da buena proyección para desarrollar sus proyectos y le hace ser una autoridad espiritual.", "El Ajpu, en su lado derecho, le pone pruebas a lo largo de la vida de las cuales siempre sale adelante.");
+-- Kiej 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (12, "La energía de su concepción, Kawoq, le brinda oportunidades y abundancia si la sabe conservar y no despilfarrar. Necesita la protección y la seguridad de su hogar.","La energía de su destino, Tz'ikin, es la fuerza que le da verdadera suerte, fortuna y protección, y le hará sobresalir a lo largo de la vida","El Aj, en su lado izquierdo, le da buena fortuna, le trae muchas oportunidades y relaciones con el extranjero, donde encontrará el desarrollo espiritual. Será reconocido como autoridad.","La energía del Imox, en su lado derecho, orienta su vida al arte y a una búsqueda de la belleza y la armonía y lo hace más flexible en la vida. Este signo le hace hacer cosas inusuales. La persona puede desarrollar facilmente su intuición.");
+
+-- qanil 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (13, "El Ajpu, en la concepción, le da poder, un don de servicio y ayuda a los demás. Vencerá los obstáculos en su camino, y poco a poco logrará la confianza en sí mismo.","La energía de su destino, Ajmaq, es el que más influye en su futuro, le da cambios. Y le dá una inclinación hacia la espiritualidad. Ajmaq es la curiosidad, le impulsa a mundos desconocidos.","En su lado izquierdo, influye la energía del I'x, que le trae dignidad y responsabilidad en todo lo que emprende, la fuerza para terminar con lo que no le conviene. Será reconocida la labor que realiza. Debe solucionar sus propias necesidades antes de ayudar a los demás.","El Iq', en su lado derecho, lo hace soñador y de fácil entendimiento, sensitivo y de buena imaginación. Muy afectado por la Luna.");
+
+-- Toj 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (14,"La energía de su concepción, Imox, le trae buena dosis de sensibilidad y excentricidad; desarrolla su intuición y revelaciones por medio de los sueños. Buena relación con el agua.","La energía de su destino, No'j (conocimiento y sabiduría), hará de su vida una experiencia maravillosa y digna.","El Tz'ikin, en su lado izquierdo, le dá una energía extra que lo hará parecer inagotable. Contará con una buena posición social y fortuna.","El Aq'ab'al, en su lado derecho, le hará parecer físicamente más joven de lo que en realidad es y le dá una visión futurista. Muchas oportunidades a lo largo de su vida.");
+
+-- tzi 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) 
+values (
+    15,
+    "La energía de su concepción, lq', le da mucha imaginación, a veces no hace diferencia entre su imaginación y la realidad. Debe orientar esta cualidad al arte. Fuerte influencia de la Luna.",
+    "La energía de su destino, Tijax, le ayuda a retirar todo lo que pueda hacerle daño o sombra en su camino. Le da el poder de cortar cualquier energía negativa.",
+    "El Ajmaq, en su lado izquierdo, lo acerca a la espiritualidad y desarrolla la visión, la intuición y le da dotes de profetas. Le trae prestigio y buena posición tanto en lo social como en lo económico.",
+    "El K'at (la red), en su lado derecho, le trae enredos. Debe aprender a no dirigir la vida de los demás, así esta red le servirá para conseguir lo que quiere."
+);
+
+-- Batz 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (16,"La energía de su concepción, Aq'ab'al, le da un interés especial por el pasado y una visión futurista. Su mayor problema será ubicarse en el presente. Tiene un desarrollo espiritual.",
+"La energía de su destino, Kawoq, orienta la persona hacia la comunidad. El tema de la familia le acompañará toda la vida.",
+"El No'j, en su lado izquierdo, le dá nobleza al conocimiento adquirido a lo largo de la vida que se tornará en sabiduría. Posee una fuerte tendencia a lo espiritual.",
+"El Kan, en su lado derecho, le da una fuerza extra. La energía y el fuego interno serán su mayor prueba. Su mano derecha obrará muchas curaciones.");
+
+
+-- E 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (17,"El K'at, como signo de concepción, es responsable de los enredos que le pone la vida.",
+"La energía del destino, Ajpu, le dá seguridad y estabilidad, le ayudará a realizar sus propósitos y logrará vencer los obstáculos y pruebas que la vida le pone.",
+"El Tijax, en su lado izquierdo, lo protege de los engañadores y le indica cuando retirarse en una situación negativa. Lo favorece no solo en el plano material, sino también en el plano espiritual. Puede hacer decisiones impulsivas.",
+"El Kame, en su lado derecho, denota un alma antigua con inclinación al pasado, a lo ancestral. Será respetado en la edad mayor. Esta energía le protege de la muerte en accidentes y enfermedades. Buena comunicación con sus antepasados y otras dimensiones.");
+
+-- aj 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (18,"La energía de su concepción, Kan, le brinda una fuerza extra, inagotable; tiene mucha energía, por lo que es muy deseado o rechazado. La autodisciplina es su mejor aliada para canalizar su energía. Una eterna búsqueda del conocimiento.",
+"Su signo de destino es Imox, hace que su vida se vea enriquecida por experiencias fuera de lo común. Le dá una especial propensión hacia el misticismo. Inconformidad hacia lo establecido.",
+"El Kawoq, en su lado izquierdo, influye a que planifique en grande, a buscar el bienestar común y la justicia social.",
+"El Kej, en su lado derecho, le dá inspiración e imaginación, le dá sensibilidad hacia el arte, en especial la música y la pintura.");
+
+-- ix 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (19,"El Kame, a la concepción, le hará sentir una atracción hacia lo antiguo y le permite una exitosa búsqueda intérior. Extraordinaria intuición.",
+"El Iq', como signo del destino, alimenta su imaginación y pensamientos dando una inteligencia especial.",
+"Con la energía de Ajpu, en su lado izquierdo, vencerá las pruebas, especialmente las de índole espiritual y le dará certeza, seguridad y fuerza para alcanzar sus metas. La persona necesita que le reconozcan sus logros.",
+"El Q'anil, en su lado derecho, lo orienta para ser un gran sembrador, todo lo que siembre tendrá frutas." );
+
+-- tzikin 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (0,"La influencia del Kej, a la concepción, lo hace necesitar y amar la naturaleza; se acomoda muy bien en toda situación y lugar que les toque vivir.",
+"El Aq'ab'al, como energía del destino, le orienta a buscar en el pasado las respuestas, y también a todo lo nuevo, a la tecnología. Este signo le dará una apariencia juvenil.",
+"El Imox, en su lado izquierdo, le marca lo inesperado, orienta su vida hacia el misticismo, dándole fuerza y capacidad para desarrollar sus sentidos y fuerza interna.",
+"El Toj, en su lado derecho, le da calidez humana, el contacto con el fuego es importante para su armonía y equilibrio.");
+
+-- Ajmaq 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (1,"El Q'anil, como signo de concepción, proporciona la semilla que germinará en un proyecto lento pero seguro en cualquiera de los aspectos de su vida.",
+"El K'at, como energía del destino, le pone las pruebas y enredos. El trabajo es aprender de todos estos enredos y fuertes experiencias que le ha puesto la vida. La curiosidad del Ajmaq y la red del K'at son una alianza difícil de controlar.",
+"La energía del Iq', en su lado izquierdo, lo impulsa hacia los misterios y la espiritualidad, provocando una mente expansiva y una conciencia universal.",
+"La energía del Tz'i', en su lado derecho, indica una tendencia a la ley material. Su mano derecha tiene el poder y la autoridad de curar toda enfermedad de origen orgánico.");
+
+
+-- Noj 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (2,"El signo de Toj, en la concepción, indica un sufrimiento emocional principalmente en la niñez. Los sufrimientos o pagos que le tocan tienen allí su origen.",
+"El Kan, como signo del destino, le proporciona mucha energía. Le dá el romanticismo y proporciona amores platónicos.",
+"La influencia de Aq'ab'al, en su lado izquierdo, le manifiesta muchos cambios, principalmente en lo espiritual por lo que necesita centralizar su atención en una disciplina para no dispersar sus energías. Signo renovador y cambiante. Su mayor experiencia en la vida se la dan los viajes.",
+"La energía de B'atz', en su lado derecho, le da un don especial para las artes, para la medicina, la cirugía y especialmente la medicina ancestral.");
+
+-- Tijax 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (3,"La energía del Tz'i', en su concepción, le da una relación con la justicia, siendo reconocido como autoridad. Son justos pero drásticos. Experiencias extraordinarias en el campo espiritual.",
+"El Kame, como destino, lo protege de accidentes y mala muertes, por lo que logra finalizar su propósito de existencia. Kame es la muerte, el signo de los ancestros y de la seguridad.",
+"La energía del K'at, en su lado izquierdo, le indica una vida llena de experiencias y cambios. Debe meditar su accionar para no estar atrapado en situaciones en las que los demás arreglan sus problemas.",
+"EI E', en su lado derecho, le propicia buena fortuna y medios económicos para la vida. Viajes o cambio de residencia de forma intempestiva.");
 
 
 
+-- Kawok 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (4,"La energía de su concepción, B'atz', le da buena disposición como planificador y ejecutor de proyectos communitarios, y lo acerca a la medicina tradicional.",
+"La energía del destino, Kej, lo marca como una persona sensitiva, ágil, nerviosa, de acciones rápidas. El signo Kej le indica tomar precaución, pues en donde menos lo espera lo pueden traicionar. Necesita manifestaciones artísticas y tener su propio espacio, su refugio.",
+"La influencia del Kan, en su lado izquierdo, hace que su mente y espíritu alcancen una relación conjunta. Despierta los poderes ocultos en la persona",
+"El Aj, en su lado derecho, le da un carácter fuerte y autoritario, aunque en el fondo es noble y siempre busca protección.");
 
 
 
+-- Ajpu 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (5,"El signo E', en la concepción, le depara muchos viajes, y por temporadas vivirá en el extranjero. Esta energía propicia los amores con gente extranjera.",
+"La energía del destino, Q'anil, le hace ser sembrador, siendo su misión señalar el camino y plantar la semilla, no necesariamente ve el fruto de sus acciones. Anda con certeza, donde llega tu convicción comenzará fluir la energía.",
+"El Kame, en su lado izquierdo, protege la vida del nacido en Ajpu. Le proporciona una gran curiosidad, valentía y espíritu aventurero.",
+"La energía del I'x, en su lado derecho, le da el poder para ser buen intermediario, es la que le otorga los dotes artísticos. A los hombres da un conocimiento de la mujer. En la mujer pondrá la feminidad, la sensualidad y la astucia.");
+--
+-- imox 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (6, "La energía de su concepción, Aj, orienta su vida dándole orden y seriedad, pues de otra forma le daría rienda suelta a su locura.",
+"La energía de su destino, Toj, le hará pagar sus desaciertos; le indica que debe hacer ofrendas de índole espiritual y material.",
+"La energía del día Kej (el venado), en su lado izquierdo, le da sensibilidad, un acercamiento a la naturaleza, lo ayuda a ubicarse en toda situación y lugar. También le proporciona agilidad mental para solucionar problemas y enredos en los que se mete.",
+"El Tz'ikin, en su lado derecho, le trae suerte y fortuna en el trabajo y los negocios para vivir cómodamente. Romántico, tierno, cálido. Puede romper las relaciones en un minuto.");
 
-
-
-
+-- iq 
+insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (7, "La energía de su concepción, I'x, le trae comprensión y armonía con el sexo opuesto. Instinto de protección y ataque, parecido al felino.",
+"En el futuro lo acompañara el signo de la ley, Tz'i', solo que a su medida hace su propia ley.",
+"En su lado izquierdo aparece la energía de Q'anil, que le da una sensibilidad especial para el arte, que es su mejor forma de expresión. Su crecimiento espiritual depende de su armonía con la Madre Tierra.",
+"La energía de Ajmaq, en su lado derecho, le da curiosidad que bien aplicado lo hará descubrir o inventar muchas cosas. Gran energía de fuerza curativa en su mano derecha.");
 
 --
 -- Restricciones para tablas volcadas

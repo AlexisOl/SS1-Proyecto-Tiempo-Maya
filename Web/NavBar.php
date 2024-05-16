@@ -125,6 +125,14 @@ $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by ord
                 <li>
                   <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cruz Maya
+                  </button>
+                  <a class="nav-link" href="CruzMaya.php" style="font-size: 13px;">Cruz Maya </a>
+
+                </li>
+                <li>
+                  <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Caluladora
                   </button>
                   <a class="nav-link" href="calculadora.php" style="font-size: 13px;">Calculadora </a>
@@ -135,8 +143,14 @@ $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by ord
 
             </li>
 
+
+
             <!--para la region-->
             <li class="nav-item"><a class="nav-link" href="relacionMesoamericana.php">Relacion Mesoamericana</a></li>
+
+
+            <!--para la galeria-->
+            <li class="nav-item"><a class="nav-link" href="galeria.php">Galeria</a></li>
 
 
           </ul>
