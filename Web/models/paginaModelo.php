@@ -2,10 +2,23 @@
 <?php
 
 $conn = include '../conexion/conexion.php';
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
+
 $pagina = $_GET['pagina'];
-$informacion = $conn->query("SELECT htmlCodigo,seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' order by orden;");
-$secciones = $conn->query("SELECT seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' group by seccion  order by orden;");
-$elementos = $conn->query("SELECT nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND nombre!='Informacion' AND seccion!='Informacion' order by orden;");
+
+// para la info
+$informacion = '';
+// para las secciones
+$secciones = '';
+if ($idioma == "espaniol") {
+    $informacion = $conn->query("SELECT htmlCodigo,seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' order by orden;");
+    $secciones = $conn->query("SELECT seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' GROUP BY seccion ORDER BY orden;");
+} else {
+    $informacion = $conn->query("SELECT htmlCodigo,seccionOtroIdioma as seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' order by orden;");
+    $secciones = $conn->query("SELECT seccionOtroIdioma AS seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' GROUP BY seccionOtroIdioma ORDER BY orden;");
+}
+
+$elementos = $conn->query("SELECT nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "'  AND nombre!='Informacion' AND seccion!='Informacion' order by orden;");
 
 
 if (isset($_GET['fecha'])) {
@@ -104,9 +117,12 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
         </div>
     </section>
 
+
+
+
+
+
     <?php
-
-
     foreach ($secciones as $seccion) {
         $stringPrint = "<section id='" . $seccion['seccion'] . "'> <div class='container'> <div class='section-header'><h3 class='section-title'>" . $seccion['seccion'] . " </h3> </div>";
         foreach ($informacion as $info) {

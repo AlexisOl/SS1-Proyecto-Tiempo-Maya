@@ -597,6 +597,63 @@ insert into cruzMaya(nahual, concepcion, destino, izquierda, derecha) values (7,
 "En su lado izquierdo aparece la energía de Q'anil, que le da una sensibilidad especial para el arte, que es su mejor forma de expresión. Su crecimiento espiritual depende de su armonía con la Madre Tierra.",
 "La energía de Ajmaq, en su lado derecho, le da curiosidad que bien aplicado lo hará descubrir o inventar muchas cosas. Gran energía de fuerza curativa en su mano derecha.");
 
+
+--- nueva tabla para la visualizacion especifica de la cruz maya 
+
+create table cruzMayaEspecifica(
+  identificador int auto_increment not null,
+  nahual int(11) not null,
+  id_nahual_concepcion int(11) not null,
+  id_nahual_destino int(11) not null,
+  id_nahual_izquierda int(11) not null,
+  id_nahual_derecha int(11) not null,
+  PRIMARY key(identificador),
+  FOREIGN key (nahual) REFERENCES cruzMaya(identificador),
+  FOREIGN key (id_nahual_concepcion) REFERENCES nahual(idweb),
+  FOREIGN key (id_nahual_destino) REFERENCES nahual(idweb),
+  FOREIGN key (id_nahual_izquierda) REFERENCES nahual(idweb),
+  FOREIGN key (id_nahual_derecha) REFERENCES nahual(idweb)
+);
+
+INSERT INTO `cruzMayaEspecifica` (`identificador`, `nahual`, `id_nahual_concepcion`, `id_nahual_destino`, `id_nahual_izquierda`, `id_nahual_derecha`) VALUES
+(1, 9, 0, 16, 14, 2),
+(2, 10, 1, 17, 15, 3),
+(3, 11, 2, 18, 16, 4),
+(4, 12, 3, 19, 17, 5),
+(5, 13, 4, 0, 18, 6),
+(6, 14, 5, 1, 19, 7),
+(7, 15, 6, 2, 0, 8),
+(8, 20, 7, 3, 1, 9),
+(9, 16, 8, 4, 2, 10),
+(10, 17, 9, 5, 3, 11),
+(11, 18, 10, 6, 4, 12),
+(12, 19, 11, 7, 5, 13),
+(13, 1, 12, 8, 6, 14),
+(14, 2, 13, 9, 7, 15),
+(15, 3, 14, 10, 8, 16),
+(16, 4, 15, 11, 9, 17),
+(17, 5, 16, 12, 10, 18),
+(18, 6, 17, 13, 11, 19),
+(19, 7, 18, 14, 12, 0),
+(20, 8, 19, 15, 13, 1);
+
+--nueva categoria
+
+INSERT INTO `categoria` (`nombre`) VALUES
+('Mesoamerica');
+alter table pagina 
+add column idioma varchar(100);
+
+alter table pagina 
+add column categoriaOtroIdioma varchar(400);
+alter table  pagina
+add column seccionOtroIdioma varchar(400);
+
+-- para la pagina mesoamericana espaniol
+INSERT INTO `pagina` (`orden`, `nombre`, `categoria`, `seccion`, `htmlCodigo`,`idioma`) VALUES
+(1, ' Relacion Mesoamericana', 'Mesoamerica', 'Informacion', "<p>El Calendario Maya y el Calendario Mexica son dos sistemas de medición del tiempo que se desarrollaron en Mesoamérica. Ambos se basan en ciclos astronómicos y matemáticos, pero tienen diferencias importantes en su estructura y funcionamiento.</p>", "espaniol"),
+(1,  "K'oje' k'oje' chij", 'Mesoamerica', 'Informacion', "<pLe Cholq'ij taq maya ch'aj le Cholq'ij taq mexica k'olik jun pa che' k'utunem taq che' pa Mesoamérica. Ta kojlebal ruk'uj jun k'oje' junal b'e le xib'al q'ij taq che' junab'ix saqob'al, ch'aqa' kan qaab'al taq che' re q'utunemal.</p>", "kiche");
+
 --
 -- Restricciones para tablas volcadas
 --

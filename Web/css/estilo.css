@@ -12,6 +12,41 @@
 }
 
 
+.cross-container {
+    display: grid;
+    grid-template-areas:
+        "top top top"
+        "left center right"
+        "bottom bottom bottom";
+    gap: 10px; /* Ajusta el espacio entre las imágenes según sea necesario */
+}
+
+.cross-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2dc997;
+}
+
+.cross-item.top {
+    grid-area: top;
+}
+
+.cross-item.left {
+    grid-area: left;
+}
+
+.cross-item.center {
+    grid-area: center;
+}
+
+.cross-item.right {
+    grid-area: right;
+}
+
+.cross-item.bottom {
+    grid-area: bottom;
+}
 
 body {
   background: #fff;

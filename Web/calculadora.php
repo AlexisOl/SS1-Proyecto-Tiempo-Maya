@@ -22,7 +22,7 @@ $cholquij = $nahual['nahual-name'] . " " . strval($energia);
 $nombreNahual = isset($nahual['nahual-name']) ? $nahual['nahual-name'] : 'ddd';
 //aqui obtiene la cruz
 $cruz = include 'backend/buscar/conseguir_cruzMaya.php';
-
+$cruzEspecifica = include 'backend/buscar/conseguir_cruzEspecifica.php';
 // split  a los numeors de cuenta larga 
 $valores = explode(".", $cuenta_larga);
 
@@ -85,7 +85,7 @@ function determinarTzoik($nombre)
         case "Ajmaq":
             return "./imgs/Calendario_Cholquij/Nahuales/cholquij-ajmaq.png";
         case "No'j":
-            return "./imgs/Calendario_Cholquij/Nahuales/cholquij-Noj.png";
+            return "./imgs/Calendario_Cholquij/Nahuales/cholquij-noj.png";
         case "Tijax":
             return "./imgs/Calendario_Cholquij/Nahuales/cholquij-tijax.png";
         case "Kawoq":
@@ -360,8 +360,28 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                     </table>
                 </div>
                 <h2>Cruz Maya</h2>
-                <img src="<?php echo determinarCruz($nombreNahual); ?>" alt="Cuenta larga" class="img-cuentalarga"
-                    height="250" width="150">
+                <div class="cross-container">
+                    <div class="cross-item top">
+                        <img src="<?php echo determinarTzoik($cruzEspecifica['concepcion']); ?>" alt="Cuenta larga"
+                            class="img-cuentalarga" height="150" width="150">
+                    </div>
+                    <div class="cross-item left">
+                        <img src="<?php echo determinarTzoik($cruzEspecifica['izquierda']); ?>" alt="Cuenta larga"
+                            class="img-cuentalarga" height="150" width="150">
+                    </div>
+                    <div class="cross-item center">
+                        <img src="<?php echo determinarTzoik($cruzEspecifica['nahual']); ?>" alt="Cuenta larga"
+                            class="img-cuentalarga" height="150" width="150">
+                    </div>
+                    <div class="cross-item right">
+                        <img src="<?php echo determinarTzoik($cruzEspecifica['derecha']); ?>" alt="Cuenta larga"
+                            class="img-cuentalarga" height="150" width="150">
+                    </div>
+                    <div class="cross-item bottom">
+                        <img src="<?php echo determinarTzoik($cruzEspecifica['destino']); ?>" alt="Cuenta larga"
+                            class="img-cuentalarga" height="150" width="150">
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-md-6">
