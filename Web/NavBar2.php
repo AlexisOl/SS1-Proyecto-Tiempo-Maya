@@ -7,6 +7,8 @@ $nahualesNav = $conn->query("SELECT nombre FROM tiempo_maya.nahual order by nomb
 $energiasNav = $conn->query("SELECT nombre FROM tiempo_maya.energia order by id;");
 $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by orden ;");
 
+
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
 ?>
 <?php include "../mensaje.php"; ?>
 
@@ -117,14 +119,94 @@ $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by ord
               <a class="nav-link" href="../models/paginaModelo.php?pagina=Rueda Calendarica">Rueda Calendarica</a>
             </li>
 
-            <li class="nav-item"><a class="nav-link" href="../calculadora.php">Calculadora</a></li>
 
+            <li class="nav-item"><a class="nav-link" href="../models/paginaModelo.php?pagina=Calculadora">
+                Calculadora &nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Calculadora
+              </button>
+              <ul>
+                <li>
+                  <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cruz Maya
+                  </button>
+                  <a class="nav-link" href="../CruzMaya.php" style="font-size: 13px;">Cruz Maya </a>
+
+                </li>
+                <li>
+                  <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Caluladora
+                  </button>
+                  <a class="nav-link" href="../calculadora.php" style="font-size: 13px;">Calculadora </a>
+
+                </li>
+
+              </ul>
+
+            </li>
+
+
+
+            <!--para la region-->
+            <li class="nav-item"><a class="nav-link" href="../models/paginaModelo.php?pagina=Mesoamerica">Relacion
+                Mesoamericana</a></li>
+
+
+            <!--para la galeria-->
+            <li class="nav-item"><a class="nav-link" href="../galeria.php">Galeria</a></li>
+
+
+            <!--para el idioma-->
+            <li class="nav-item"><a class="nav-link" href="#">
+                Idiomas &nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="language-button" onclick="changeLanguage('espaniol')">Espaniol</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="language-button" onclick="changeLanguage('kiche')">Kiche</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
 </header>
+<script type="text/javascript">
+  function changeLanguage(idioma) {
+    const currentLanguage = getCookie('language');
+    const newLanguage = idioma;
+    if (currentLanguage !== newLanguage) {
+      document.cookie = "language=" + newLanguage + ";path=/";
+      location.reload();
+    }
+  }
+
+  function getCookie(name) {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+  }
+
+  var relleno = false;
+
+  function rellenar() {
+    if (!relleno) {
+      $('#header').addClass('header-fixed1');
+      $('#inicioContainer').addClass('iniciofixed');
+      relleno = true;
+    } else {
+      relleno = false;
+      $('#header').removeClass('header-fixed1');
+      $('#inicioContainer').removeClass('iniciofixed');
+    }
+  }
+</script>
 
 
 <script type="text/javascript">

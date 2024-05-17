@@ -160,9 +160,18 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
             <li class="nav-item"><a class="nav-link" href="galeria.php">Galeria</a></li>
 
             <!--para el idioma-->
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="language-button" onclick="changeLanguage()">Idioma</a>
+            <li class="nav-item"><a class="nav-link" href="#">
+                Idiomas &nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="language-button" onclick="changeLanguage('espaniol')">Espaniol</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="language-button" onclick="changeLanguage('kiche')">Kiche</a>
+                </li>
+              </ul>
             </li>
+
 
           </ul>
         </div>
@@ -172,11 +181,13 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
 </header>
 
 <script type="text/javascript">
-  function changeLanguage() {
+  function changeLanguage(idioma) {
     const currentLanguage = getCookie('language');
-    const newLanguage = currentLanguage === 'kiche' ? 'espaniol' : 'kiche';
-    document.cookie = "language=" + newLanguage + ";path=/";
-    location.reload();
+    const newLanguage = idioma;
+    if (currentLanguage !== newLanguage) {
+      document.cookie = "language=" + newLanguage + ";path=/";
+      location.reload();
+    }
   }
 
   function getCookie(name) {

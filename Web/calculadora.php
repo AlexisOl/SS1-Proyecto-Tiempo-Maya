@@ -1,7 +1,7 @@
 <?php
 session_start();
 $conn = include "conexion/conexion.php";
-
+// para la fecha
 if (isset($_GET['fecha'])) {
     $fecha_consultar = $_GET['fecha'];
     $horario = $_GET['fecha'];
@@ -11,6 +11,10 @@ if (isset($_GET['fecha'])) {
     $horario = date("H:i:s");
 
 }
+
+// para el idioma 
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
+
 
 $nahual = include 'backend/buscar/conseguir_nahual_nombre.php';
 $energia = include 'backend/buscar/conseguir_energia_numero.php';
@@ -391,7 +395,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
 
                     <div class="col-md-6">
-                        <h3>Descripcion</h3>
+                        <h3>Destino</h3>
                         <p style="color:white;"><?php echo $cruz['destino'] ?></p>
                     </div>
                 </div>
