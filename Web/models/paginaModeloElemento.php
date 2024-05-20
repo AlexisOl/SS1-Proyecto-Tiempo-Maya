@@ -6,13 +6,22 @@ session_start(); ?>
 <?php
 
 $conn = include '../conexion/conexion.php';
+// tipo de idioma
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
+$significado = $idioma === 'espaniol' ? 'Significado' : 'Tzij ';
 $tabla = $_GET['elemento'];
 $table = strtolower($tabla);
-$datos = $conn->query("SELECT nombre,significado,htmlCodigo,ruta FROM tiempo_maya." . $table . ";");
+
+
+// para la info
+$datos = $conn->query("SELECT nombre,significado,htmlCodigo,ruta FROM tiempo_maya." . $table . " /** AND idioma='" . $idioma . "' */;");
+
 
 $elementos = $datos;
 $informacion = $conn->query("SELECT htmlCodigo FROM tiempo_maya.pagina WHERE nombre='" . $tabla . "';");
 
+
+// para las fechas
 if (isset($_GET['fecha'])) {
     $fecha_consultar = $_GET['fecha'];
     $horario = $_GET['fecha'];
@@ -131,7 +140,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                 </div>
                 <?php foreach ($datos as $dato) {
                     $stringPrint = "<h4 id='" . $dato['nombre'] . "'>" . $dato['nombre'] . "</h4>";
-                    $stringPrint .= "<h5>Significado</h5> <p>" . $dato['significado'] . "</p>";
+                    $stringPrint .= "<h5>$significado</h5> <p>" . $dato['significado'] . "</p>";
                     $stringPrint .= "<p>" . $dato['htmlCodigo'] . "</p> ";
                     $stringPrint .= "<img src=" . "..\\imgs\\" . $dato['ruta'] . " alt='" . $dato['ruta'] . "' class='img-elemento'> <hr>";
                     echo $stringPrint;

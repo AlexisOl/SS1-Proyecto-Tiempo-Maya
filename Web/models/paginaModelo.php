@@ -14,8 +14,8 @@ if ($idioma == "espaniol") {
     $informacion = $conn->query("SELECT htmlCodigo,seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' order by orden;");
     $secciones = $conn->query("SELECT seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' GROUP BY seccion ORDER BY orden;");
 } else {
-    $informacion = $conn->query("SELECT htmlCodigo,seccionOtroIdioma as seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' order by orden;");
-    $secciones = $conn->query("SELECT seccionOtroIdioma AS seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' GROUP BY seccionOtroIdioma ORDER BY orden;");
+    $informacion = $conn->query("SELECT htmlCodigo,seccionOtroIdioma AS seccionIdioma, seccion as seccion,nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' order by orden;");
+    $secciones = $conn->query("SELECT seccionOtroIdioma AS seccionIdioma, seccion FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "' GROUP BY seccion ORDER BY orden;");
 }
 
 $elementos = $conn->query("SELECT nombre FROM tiempo_maya.pagina WHERE categoria='" . $pagina . "' AND idioma='" . $idioma . "'  AND nombre!='Informacion' AND seccion!='Informacion' order by orden;");
@@ -88,7 +88,10 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
 }
 
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -126,32 +129,46 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
     foreach ($secciones as $seccion) {
         $stringPrint = "<section id='" . $seccion['seccion'] . "'> <div class='container'> <div class='section-header'><h3 class='section-title'>" . $seccion['seccion'] . " </h3> </div>";
         foreach ($informacion as $info) {
+            echo $seccion['seccion'] . "<--nuevo valor ->" . $info['$seccion'];
             if ($seccion['seccion'] == $info['seccion']) {
                 if ($info['seccion'] != "Informacion") {
-
+                    echo $info['nombre'];
                     $stringPrint .= "<h2><a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "'/>" . $info['nombre'] . " </a></h2>";
                 }
+
                 $stringPrint .= "<hr>";
                 $stringPrint .= $info['htmlCodigo'];
+
                 foreach ($elementos as $elemento) {
+                    echo $elemento['nombre'] . "elemento";
                     if ($elemento['nombre'] != 'Uayeb' && $elemento['nombre'] == $info['nombre']) {
                         $tabla = strtolower($elemento['nombre']);
                         $elementosEl = $conn->query("SELECT nombre FROM tiempo_maya." . $tabla . ";");
+                        $el2 = $conn->query("SELECT nombre FROM tiempo_maya.Unil_ba;");
                         $stringPrint .= "<ul>";
+                        $valor = '';
+
+                        foreach ($el2 as $el) {
+                            echo $el['nombre'] . "****";
+
+                        }
                         foreach ($elementosEl as $el) {
+                            echo $el['nombre'];
                             if ($el['nombre'] == "Informacion") {
-                                $stringPrint .= "<li> <a href='#'>" . $el['nombre'] . " </a> </li>";
+                                $valor .= "<li> <a href='#'>" . $el['nombre'] . " </a> </li>";
                             } else {
-                                $stringPrint .= "<li> <a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "#" . $el['nombre'] . "'>" . $el['nombre'] . " </a> </li>";
+                                $valor .= "<li> <a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "#" . $el['nombre'] . "'>" . $el['nombre'] . " </a> </li>";
                             }
                         }
-                        $stringPrint .= "</ul>";
+                        $valor .= "</ul>";
+                        $stringPrint .= $valor;
+                        echo $stringPrint;
                     }
                 }
             }
         }
         $stringPrint .= "</div> </section> <hr>";
-        echo $stringPrint;
+        echo $stringPrint . " " . $valor;
     }
 
     ?>
@@ -168,7 +185,6 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 </body>
 
 </html>
-
 <script>
 
     //aca haria los cambios 
@@ -207,7 +223,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
         //array para las imagenes
         let images2 = [];
         const container = document.getElementById('inicio');
-        const horario = "<?php echo $horarioDeterminado; ?>";
+        const horario = "<?php echo $stringPrint; ?>";
         console.log(horario);
         switch (horario) {
             case "amanecer":

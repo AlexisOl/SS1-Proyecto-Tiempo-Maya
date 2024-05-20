@@ -697,6 +697,9 @@ INSERT INTO `cruzMaya` ( `nahual`, `concepcion`, `destino`, `izquierda`, `derech
 
 
 
+---creacion de nuevas tablas para lo de kiche 
+
+--kins
 
 
 --

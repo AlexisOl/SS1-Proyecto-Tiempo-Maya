@@ -113,7 +113,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                         echo $embed_code;
                                         ?>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Card title</h5>
+                                            <h5 class="card-title">Entrevista abuelo Maya Mynor Gomez</h5>
 
                                         </div>
                                     </div>
@@ -127,7 +127,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                         echo $codigo2;
                                         ?>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Card title</h5>
+                                            <h5 class="card-title">Entrevista Josefina Nimatuj</h5>
 
                                         </div>
                                     </div>
@@ -139,30 +139,21 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/img2.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3 ">
 
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/img3.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
 
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/img4.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -170,10 +161,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/img5.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
 
                                 </div>
@@ -181,10 +169,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/img6.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
@@ -192,10 +177,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                     <div class="card">
                                         <img class="card-img-top" src="./imgs/galeria/Untitled.jpg"
                                             alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>

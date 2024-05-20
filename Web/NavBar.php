@@ -1,17 +1,28 @@
 <?php
 $conn = include 'conexion/conexion.php';
 // cambios de nombre de la base de datos para ir acorde ver bien
-$kinesNav = $conn->query("SELECT nombre FROM tiempo_maya.kin order by nombre;");
-$uinalesNav = $conn->query("SELECT nombre FROM tiempo_maya.uinal order by nombre;");
-$nahualesNav = $conn->query("SELECT nombre FROM tiempo_maya.nahual order by nombre;");
-$energiasNav = $conn->query("SELECT nombre FROM tiempo_maya.energia order by id;");
-$periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by orden ;");
+
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
+
+
+if ($idioma == "espaniol") {
+  $kinesNav = $conn->query("SELECT nombre FROM tiempo_maya.kin order by nombre;");
+  $uinalesNav = $conn->query("SELECT nombre FROM tiempo_maya.uinal order by nombre;");
+  $nahualesNav = $conn->query("SELECT nombre FROM tiempo_maya.nahual order by nombre;");
+  $energiasNav = $conn->query("SELECT nombre FROM tiempo_maya.energia order by id;");
+  $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by orden ;");
+} else {
+  $kinesNav = $conn->query("SELECT nombre FROM tiempo_maya.kins order by nombre;");
+  $uinalesNav = $conn->query("SELECT nombre FROM tiempo_maya.unil order by nombre;");
+  $nahualesNav = $conn->query("SELECT nombre FROM tiempo_maya.nawal order by nombre;");
+  $energiasNav = $conn->query("SELECT nombre FROM tiempo_maya.energiakiche order by id;");
+  $periodosNav = $conn->query("SELECT nombre FROM tiempo_maya.periodo order by orden ;");
+}
 
 
 $idioma = 'espaniol';
 
 
-$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
 
 ?>
 <?php include "mensaje.php"; ?>
@@ -51,8 +62,10 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
 
                       if (is_array($kinesNav) || is_object($kinesNav)) {
                         foreach ($kinesNav as $kin) {
-                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=kin#" . $kin['nombre'] . "'>" . $kin['nombre'] . "</a></li>";
+                          $seccion = ($idioma == 'espaniol') ? 'kin#' : 'kins#';
+                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=" . $seccion . $kin['nombre'] . "'>" . $kin['nombre'] . "</a></li>";
                         }
+
                       } ?>
                   </ul>
                 </li>
@@ -66,7 +79,9 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
                     <div div style="width: 200px; height: 400px; overflow-y: scroll;">
                       <?php if (is_array($uinalesNav) || is_object($uinalesNav)) {
                         foreach ($uinalesNav as $uinal) {
-                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=uinal#" . $uinal['nombre'] . "'>" . $uinal['nombre'] . "</a></li>";
+                          $seccion2 = ($idioma == 'espaniol') ? 'uinal#' : 'unil#';
+
+                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=" . $seccion2 . $uinal['nombre'] . "'>" . $uinal['nombre'] . "</a></li>";
                         }
                       } ?>
                   </ul>
@@ -93,7 +108,9 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
                     <div div style="width: 200px; height: 400px; overflow-y: scroll;">
                       <?php if (is_array($nahualesNav) || is_object($nahualesNav)) {
                         foreach ($nahualesNav as $nahual) {
-                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=nahual#" . $nahual['nombre'] . "'>" . $nahual['nombre'] . "</a></li>";
+                          $seccion3 = ($idioma == 'espaniol') ? 'nahual#' : 'nawal#';
+
+                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=" . $seccion3 . $nahual['nombre'] . "'>" . $nahual['nombre'] . "</a></li>";
                         }
                       } ?>
                     </div>
@@ -109,7 +126,9 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
                     <div div style="width: 200px; height:400px; overflow-y: scroll;">
                       <?php if (is_array($energiasNav) || is_object($energiasNav)) {
                         foreach ($energiasNav as $energia) {
-                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=energia#" . $energia['nombre'] . "'>" . $energia['nombre'] . "</a></li>";
+                          $seccion4 = ($idioma == 'espaniol') ? 'energia#' : 'energiakiche#';
+
+                          echo "<li class='nav-item'><a class='nav-link' href='models/paginaModeloElemento.php?elemento=" . $seccion4 . $energia['nombre'] . "'>" . $energia['nombre'] . "</a></li>";
                         }
                       } ?>
                     </div>
@@ -128,14 +147,7 @@ $idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
                 Calculadora
               </button>
               <ul>
-                <li>
-                  <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Cruz Maya
-                  </button>
-                  <a class="nav-link" href="CruzMaya.php" style="font-size: 13px;">Cruz Maya </a>
 
-                </li>
                 <li>
                   <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
