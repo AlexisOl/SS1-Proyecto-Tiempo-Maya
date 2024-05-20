@@ -105,7 +105,8 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
   <div>
     <section id="inicio">
       <div id="inicioContainer" class="inicio-container">
-        <h1>Bienvenido al Tiempo Maya</h1>
+        <h1><?php echo $idioma === 'espaniol' ? 'Bienvenido al Tiempo Maya' : "Saqärib'al Tiempo Maya"; ?>
+        </h1>
         <div class="div-haab">
           <h5><?php echo $idioma === 'espaniol' ? 'Calendario Haab' : "Cholq'ij Haab"; ?> :
             <?php echo isset($haab["uinal-date"]) ? $haab["uinal-date"] : ''; ?>

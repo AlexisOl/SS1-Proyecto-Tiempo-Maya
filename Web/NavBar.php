@@ -224,19 +224,7 @@ if ($idioma == "espaniol") {
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
 
-  var relleno = false;
 
-  function rellenar() {
-    if (!relleno) {
-      $('#header').addClass('header-fixed1');
-      $('#inicioContainer').addClass('iniciofixed');
-      relleno = true;
-    } else {
-      relleno = false;
-      $('#header').removeClass('header-fixed1');
-      $('#inicioContainer').removeClass('iniciofixed');
-    }
-  }
 </script>
 
 

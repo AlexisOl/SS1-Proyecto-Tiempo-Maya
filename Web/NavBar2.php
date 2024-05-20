@@ -163,7 +163,7 @@ $seccion4 = ($idioma == 'espaniol') ? 'energia#' : 'energiakiche#';
                     <?php echo $idioma === 'espaniol' ? 'Usar Calculadora' : "Ch'aqib'äl"; ?>
                   </button>
                   <a class="nav-link" href="../calculadora.php"
-                    style="font-size: 13px;">Calcu<?php echo $idioma === 'espaniol' ? 'Usar Calculadora' : "Ch'aqib'äl"; ?>ladora
+                    style="font-size: 13px;"><?php echo $idioma === 'espaniol' ? 'Usar Calculadora' : "Ch'aqib'äl"; ?>
                   </a>
 
                 </li>
@@ -220,19 +220,7 @@ $seccion4 = ($idioma == 'espaniol') ? 'energia#' : 'energiakiche#';
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
 
-  var relleno = false;
 
-  function rellenar() {
-    if (!relleno) {
-      $('#header').addClass('header-fixed1');
-      $('#inicioContainer').addClass('iniciofixed');
-      relleno = true;
-    } else {
-      relleno = false;
-      $('#header').removeClass('header-fixed1');
-      $('#inicioContainer').removeClass('iniciofixed');
-    }
-  }
 </script>
 
 

@@ -402,15 +402,8 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                 <div class="row">
                     <div class="col-md-6">
                         <h3><?php echo $idioma === 'espaniol' ? 'Concepción' : "K'ayb'al"; ?></h3>
-
-
-
-
-
                         <p style="color:white;"><?php echo $cruz['concepcion'] ?></p>
                     </div>
-
-
                     <div class="col-md-6">
                         <h3><?php echo $idioma === 'espaniol' ? 'Destino' : "Ajmaq"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['destino'] ?></p>
@@ -421,8 +414,6 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                         <h3><?php echo $idioma === 'espaniol' ? 'Izquierda' : "Xkich'aw"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['izquierda'] ?></p>
                     </div>
-
-
                     <div class="col-md-6">
                         <h3><?php echo $idioma === 'espaniol' ? 'Derecha' : "Xkib'al"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['derecha'] ?></p>
