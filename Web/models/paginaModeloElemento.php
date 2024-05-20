@@ -113,15 +113,17 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
             <?php echo "<h1>" . $tabla . " </h1>";
             ?>
-            <a href='#informacion' class='btn-get-started'>Informacion</a>
-            <a href='#elementos' class='btn-get-started'>Elementos</a>
+            <a href='#informacion'
+                class='btn-get-started'><?php echo $idioma === 'espaniol' ? 'Información' : "Chojch'aw"; ?></a>
+            <a href='#elementos'
+                class='btn-get-started'><?php echo $idioma === 'espaniol' ? 'Elementos' : "Ruk'ul"; ?></a>
         </div>
     </section>
     <section id="information">
         <div class="container">
             <div class="row about-container">
                 <div class="section-header">
-                    <h3 class="section-title">INFORMACION</h3>
+                    <h3 class="section-title"><?php echo $idioma === 'espaniol' ? 'Información' : "Chojch'aw"; ?></h3>
                 </div>
                 <?php foreach ($informacion as $info) {
                     echo $info['htmlCodigo'];
@@ -136,7 +138,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
         <div class="container">
             <div class="row about-container">
                 <div class="section-header">
-                    <h3 class="section-title">Elementos</h3>
+                    <h3 class="section-title"><?php echo $idioma === 'espaniol' ? 'Elementos' : "Ruk'ul"; ?></h3>
                 </div>
                 <?php foreach ($datos as $dato) {
                     $stringPrint = "<h4 id='" . $dato['nombre'] . "'>" . $dato['nombre'] . "</h4>";

@@ -20,6 +20,7 @@ $cuenta_larga = include 'backend/buscar/conseguir_fecha_cuenta_larga.php';
 $nahualRuta = ".\\imgs\\" . $nahual['nahual-ruta'];
 $cholquij = $nahual['nahual-name'] . " " . strval($energia);
 
+$idioma = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'espaniol';
 
 // horarios especificos 
 // amanecer 3 am - 9 am
@@ -106,16 +107,23 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
       <div id="inicioContainer" class="inicio-container">
         <h1>Bienvenido al Tiempo Maya</h1>
         <div class="div-haab">
-          <h5>Calendario Haab : <?php echo isset($haab["uinal-date"]) ? $haab["uinal-date"] : ''; ?></h5>
+          <h5><?php echo $idioma === 'espaniol' ? 'Calendario Haab' : "Cholq'ij Haab"; ?> :
+            <?php echo isset($haab["uinal-date"]) ? $haab["uinal-date"] : ''; ?>
+          </h5>
           <img src="<?php echo ".\\imgs\\" . $haab["uinal-ruta"] ?>" alt="<?php echo $haab["uinal-ruta"] ?>"
             class="img-uinal"></img>
         </div>
         <div class="div-cholquij">
-          <h5>Calendario Cholquij : <?php echo isset($cholquij) ? $cholquij : ''; ?></h5>
+          <h5><?php echo $idioma === 'espaniol' ? 'Calendario Cholquij' : "Cholq'ij Ajaw"; ?> :
+            <?php echo isset($cholquij) ? $cholquij : ''; ?>
+          </h5>
           <img src="<?php echo $nahualRuta ?>" alt="<?php echo $nahualRuta ?>" class="img-nahual"></img>
         </div>
         <div class="div-cuentalarga">
-          <h5>Cuenta Larga : <?php echo isset($cuenta_larga) ? $cuenta_larga : ''; ?></h5>
+
+          <h5><?php echo $idioma === 'espaniol' ? 'Cuenta Larga' : "Nima B'i'aj"; ?> :
+            <?php echo isset($cuenta_larga) ? $cuenta_larga : ''; ?>
+          </h5>
           <img src=".\imgs\cuentaLarga.png" alt="Cuenta larga" class="img-cuentalarga"></img>
           <!--<label style="color: whitesmoke;"><?php echo isset($fecha_consultar) ? $fecha_consultar : ''; ?></label>-->
         </div>

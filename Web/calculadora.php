@@ -260,35 +260,47 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
         <section id="inicio">
             <div id="inicioContainer" class="inicio-container">
                 <div id='formulario'>
-                    <h1>Calculadora</h1>
+                    <h1><?php echo $idioma === 'espaniol' ? 'Calculadora' : "Ch'aqib'äl"; ?></h1>
                     <form action="#" method="GET">
                         <div class="mb-1">
-                            <label for="fecha" class="form-label">Fecha</label>
+                            <label for="fecha"
+                                class="form-label"><?php echo $idioma === 'espaniol' ? 'Fecha' : "Q'ij"; ?></label>
                             <input type="date" class="form-control" name="fecha" id="fecha"
                                 value="<?php echo isset($fecha_consultar) ? $fecha_consultar : ''; ?>">
                         </div>
-                        <button type="submit" class="btn btn-get-started"><i class="far fa-clock"></i> Calcular</button>
+                        <button type="submit" class="btn btn-get-started"><i class="far fa-clock"></i>
+                            <?php echo $idioma === 'espaniol' ? 'Calcular' : "Tz'ib"; ?></button>
                     </form>
                     <div class="container">
                         <div id="tabla">
                             <table class="table table-dark table-striped">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Calendario</th>
-                                        <th scope="col" style="width: 60%;">Fecha</th>
+                                        <th scope="col">
+                                            <?php echo $idioma === 'espaniol' ? 'Calendario' : "Cholq'ij"; ?>
+                                        </th>
+                                        <th scope="col" style="width: 60%;">
+                                            <?php echo $idioma === 'espaniol' ? 'Fecha' : "Q'ij"; ?>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Calendario Haab</th>
+                                        <th scope="row">
+                                            <?php echo $idioma === 'espaniol' ? 'Calendario Haab' : "Cholq'ij Haab"; ?>
+                                        </th>
                                         <td><?php echo isset($haab) ? $haab['uinal-date'] : ''; ?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Calendario Cholquij</th>
+                                        <th scope="row">
+                                            <?php echo $idioma === 'espaniol' ? 'Calendario Cholquij' : "Cholq'ij Ajaw"; ?>
+                                        </th>
                                         <td><?php echo isset($cholquij) ? $cholquij : ''; ?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Cuenta Larga</th>
+                                        <th scope="row">
+                                            <?php echo $idioma === 'espaniol' ? 'Cuenta Larga' : "Nima B'i'aj"; ?>
+                                        </th>
                                         <td><?php echo isset($cuenta_larga) ? $cuenta_larga : ''; ?></td>
                                     </tr>
                                 </tbody>
@@ -363,7 +375,7 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                         </tbody>
                     </table>
                 </div>
-                <h2>Cruz Maya</h2>
+                <h2><?php echo $idioma === 'espaniol' ? 'Cruz Maya' : "Ch'ab'al Maya"; ?></h2>
                 <div class="cross-container">
                     <div class="cross-item top">
                         <img src="<?php echo determinarTzoik($cruzEspecifica['concepcion']); ?>" alt="Cuenta larga"
@@ -389,25 +401,30 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
 
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Concepcion</h3>
+                        <h3><?php echo $idioma === 'espaniol' ? 'Concepción' : "K'ayb'al"; ?></h3>
+
+
+
+
+
                         <p style="color:white;"><?php echo $cruz['concepcion'] ?></p>
                     </div>
 
 
                     <div class="col-md-6">
-                        <h3>Destino</h3>
+                        <h3><?php echo $idioma === 'espaniol' ? 'Destino' : "Ajmaq"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['destino'] ?></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>izquierda</h3>
+                        <h3><?php echo $idioma === 'espaniol' ? 'Izquierda' : "Xkich'aw"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['izquierda'] ?></p>
                     </div>
 
 
                     <div class="col-md-6">
-                        <h3>derecha</h3>
+                        <h3><?php echo $idioma === 'espaniol' ? 'Derecha' : "Xkib'al"; ?></h3>
                         <p style="color:white;"><?php echo $cruz['derecha'] ?></p>
                     </div>
                 </div>

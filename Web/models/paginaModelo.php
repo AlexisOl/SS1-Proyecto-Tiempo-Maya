@@ -129,10 +129,8 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
     foreach ($secciones as $seccion) {
         $stringPrint = "<section id='" . $seccion['seccion'] . "'> <div class='container'> <div class='section-header'><h3 class='section-title'>" . $seccion['seccion'] . " </h3> </div>";
         foreach ($informacion as $info) {
-            echo $seccion['seccion'] . "<--nuevo valor ->" . $info['$seccion'];
             if ($seccion['seccion'] == $info['seccion']) {
                 if ($info['seccion'] != "Informacion") {
-                    echo $info['nombre'];
                     $stringPrint .= "<h2><a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "'/>" . $info['nombre'] . " </a></h2>";
                 }
 
@@ -140,35 +138,24 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                 $stringPrint .= $info['htmlCodigo'];
 
                 foreach ($elementos as $elemento) {
-                    echo $elemento['nombre'] . "elemento";
                     if ($elemento['nombre'] != 'Uayeb' && $elemento['nombre'] == $info['nombre']) {
                         $tabla = strtolower($elemento['nombre']);
                         $elementosEl = $conn->query("SELECT nombre FROM tiempo_maya." . $tabla . ";");
-                        $el2 = $conn->query("SELECT nombre FROM tiempo_maya.Unil_ba;");
                         $stringPrint .= "<ul>";
-                        $valor = '';
-
-                        foreach ($el2 as $el) {
-                            echo $el['nombre'] . "****";
-
-                        }
                         foreach ($elementosEl as $el) {
-                            echo $el['nombre'];
                             if ($el['nombre'] == "Informacion") {
-                                $valor .= "<li> <a href='#'>" . $el['nombre'] . " </a> </li>";
+                                $stringPrint .= "<li> <a href='#'>" . $el['nombre'] . " </a> </li>";
                             } else {
-                                $valor .= "<li> <a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "#" . $el['nombre'] . "'>" . $el['nombre'] . " </a> </li>";
+                                $stringPrint .= "<li> <a href='paginaModeloElemento.php?elemento=" . $info['nombre'] . "#" . $el['nombre'] . "'>" . $el['nombre'] . " </a> </li>";
                             }
                         }
-                        $valor .= "</ul>";
-                        $stringPrint .= $valor;
-                        echo $stringPrint;
+                        $stringPrint .= "</ul>";
                     }
                 }
             }
         }
         $stringPrint .= "</div> </section> <hr>";
-        echo $stringPrint . " " . $valor;
+        echo $stringPrint;
     }
 
     ?>

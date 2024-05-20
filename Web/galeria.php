@@ -113,7 +113,9 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                         echo $embed_code;
                                         ?>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Entrevista abuelo Maya Mynor Gomez</h5>
+                                            <h5 class="card-title">
+                                                <?php echo $idioma === 'espaniol' ? 'Entrevista abuelo Maya Mynor Gomez' : "Ruk'uxlik ab'ejal Maya Mynor Gomez"; ?>
+                                            </h5>
 
                                         </div>
                                     </div>
@@ -127,7 +129,9 @@ if ($horarioDatetime >= $amanecerDatetime1 && $horarioDatetime <= $amanecerDatet
                                         echo $codigo2;
                                         ?>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Entrevista Josefina Nimatuj</h5>
+                                            <h5 class="card-title">
+                                                <?php echo $idioma === 'espaniol' ? 'Entrevista Josefina Nimatuj' : "Ruk'uxlik Josefina Nimatuj"; ?>
+                                            </h5>
 
                                         </div>
                                     </div>

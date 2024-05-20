@@ -20,7 +20,6 @@ if ($idioma == "espaniol") {
 }
 
 
-$idioma = 'espaniol';
 
 
 
@@ -42,12 +41,14 @@ $idioma = 'espaniol';
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav nav-menu">
             <li>
-              <a class="nav-link" href="models/paginaModelo.php?pagina=Calendario Haab">Calendario Haab
+              <a class="nav-link"
+                href="models/paginaModelo.php?pagina=Calendario Haab"><?php echo $idioma === 'espaniol' ? 'Calendario Haab' : "Cholq'ij Haab"; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp; </a>
               <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Calendario Haab
+                <?php echo $idioma === 'espaniol' ? 'Calendario Haab' : "Cholq'ij Haab"; ?>
               </button>
+
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li>
@@ -90,11 +91,14 @@ $idioma = 'espaniol';
             </li>
 
             <li>
-              <a class="nav-link" href="models/paginaModelo.php?pagina=Calendario Cholquij">Calendario Cholq'ij
+              <a class="nav-link"
+                href="models/paginaModelo.php?pagina=Calendario Cholquij"><?php echo $idioma === 'espaniol' ? 'Calendario Cholquij' : "Cholq'ij Ajaw"; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp; </a>
               <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Calendario Cholquij
+
+                <?php echo $idioma === 'espaniol' ? 'Calendario Cholquij' : "Cholq'ij Ajaw"; ?>
+
               </button>
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -137,23 +141,31 @@ $idioma = 'espaniol';
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="models/paginaModelo.php?pagina=Rueda Calendarica">Rueda Calendarica</a>
+              <a class="nav-link" href="models/paginaModelo.php?pagina=Rueda Calendarica">
+                <?php echo $idioma === 'espaniol' ? 'Rueda Calendarica' : "Rujil q'ij"; ?>
+
+              </a>
             </li>
 
             <li class="nav-item"><a class="nav-link" href="models/paginaModelo.php?pagina=Calculadora">
-                Calculadora &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <?php echo $idioma === 'espaniol' ? 'Calculadora' : "Ch'aqib'äl"; ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;</a>
               <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Calculadora
+                <?php echo $idioma === 'espaniol' ? 'Calculadora' : "Ch'aqib'äl"; ?>
+
               </button>
               <ul>
 
                 <li>
                   <button type="button" style="opacity: 0; height: 0;" class="nav-link" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Caluladora
+                    <?php echo $idioma === 'espaniol' ? 'Usar Calculadora' : "Ch'aqib'äl"; ?>
+
                   </button>
-                  <a class="nav-link" href="calculadora.php" style="font-size: 13px;">Calculadora </a>
+                  <a class="nav-link" href="calculadora.php"
+                    style="font-size: 13px;"><?php echo $idioma === 'espaniol' ? 'Usar Calculadora' : "Ch'aqib'äl"; ?>
+                  </a>
 
                 </li>
 
@@ -164,16 +176,20 @@ $idioma = 'espaniol';
 
 
             <!--para la region-->
-            <li class="nav-item"><a class="nav-link" href="models/paginaModelo.php?pagina=Mesoamerica">Relacion
-                Mesoamericana</a></li>
+            <li class="nav-item"><a class="nav-link" href="models/paginaModelo.php?pagina=Mesoamerica">
+                <?php echo $idioma === 'espaniol' ? 'Relación mesoamericana' : "K'amal b'i'aj Mesoamerikano"; ?>
+
+              </a></li>
 
 
             <!--para la galeria-->
-            <li class="nav-item"><a class="nav-link" href="galeria.php">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.php">
+                <?php echo $idioma === 'espaniol' ? 'Galería' : "Jolom Tz'ib'äl"; ?>
+              </a></li>
 
             <!--para el idioma-->
             <li class="nav-item"><a class="nav-link" href="#">
-                Idiomas &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <?php echo $idioma === 'espaniol' ? 'Idiomas' : "Tz'ib'anelab"; ?> &nbsp;&nbsp;&nbsp;&nbsp;</a>
               <ul>
                 <li class="nav-item">
                   <a class="nav-link" href="#" id="language-button" onclick="changeLanguage('espaniol')">Espaniol</a>
